@@ -12,11 +12,11 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         flexDirection:'column',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        paddingTop: '1rem',
     },
     
 }));
-
 
 function FormPage() {
     const classes = useStyles();

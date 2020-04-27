@@ -50360,7 +50360,7 @@ function FullScreenDialog({
       lineNumber: 135
     },
     __self: this
-  }, list.map(i => {
+  }, list.map(values => {
     return __jsx("ul", {
       className: classes.ul,
       __source: {
@@ -50748,7 +50748,8 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["makeSty
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingTop: '1rem'
   }
 }));
 
@@ -50789,7 +50790,7 @@ function FormPage() {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FFormPage&absolutePagePath=%2FUsers%2Fsusanna%2FDownloads%2FSimpleNext.js-project%2Fsrc%2Fpages%2FFormPage.tsx ***!
   \************************************************************************************************************************************************************/
@@ -50812,5 +50813,5 @@ module.exports = dll_ef0ff7c60362f24a921f;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=FormPage.js.map

@@ -133,7 +133,7 @@ export default function FullScreenDialog({ list, values }: Props) {
           My information
         </Typography>
         <Typography variant={'h6'}>
-            {list.map((i) => {
+            {list.map((values) => {
               return (
                 <ul className={classes.ul}>
                   <li>

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -372,7 +372,7 @@ function FullScreenDialog({
       lineNumber: 135
     },
     __self: this
-  }, list.map(i => {
+  }, list.map(values => {
     return __jsx("ul", {
       className: classes.ul,
       __source: {
@@ -749,7 +749,8 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["makeSty
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    paddingTop: '1rem'
   }
 }));
 
@@ -790,7 +791,7 @@ function FormPage() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!**************************************!*\
   !*** multi ./src/pages/FormPage.tsx ***!
   \**************************************/
