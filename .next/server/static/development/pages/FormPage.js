@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -131,7 +131,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var _material_ui_core_Slide__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material-ui/core/Slide */ "@material-ui/core/Slide");
 /* harmony import */ var _material_ui_core_Slide__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Slide__WEBPACK_IMPORTED_MODULE_13__);
-var _jsxFileName = "/Users/susanna/Downloads/exercise copy /exercise/src/components/ui/Dialog.tsx";
+var _jsxFileName = "/Users/susanna/Downloads/SimpleNext.js-project/src/components/ui/Dialog.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -202,7 +202,7 @@ const Transition = Object(react__WEBPACK_IMPORTED_MODULE_0__["forwardRef"])(func
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 64
     },
     __self: this
   }));
@@ -235,13 +235,7 @@ function FullScreenDialog({
     setUpdatedList([...updatedList, newValues]);
   };
 
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 104
-    },
-    __self: this
-  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_12___default.a, {
+  if (list.length === 0) return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_12___default.a, {
     className: classes.box,
     __source: {
       fileName: _jsxFileName,
@@ -260,6 +254,7 @@ function FullScreenDialog({
     __self: this
   }, "or"), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
     className: classes.open,
+    disabled: true,
     variant: "outlined",
     color: "primary",
     onClick: handleClickOpen,
@@ -268,27 +263,61 @@ function FullScreenDialog({
       lineNumber: 107
     },
     __self: this
-  }, "Show Information")), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_3___default.a, {
+  }, "Show Contacts")));
+  return __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 115
+    },
+    __self: this
+  }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_12___default.a, {
+    className: classes.box,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 116
+    },
+    __self: this
+  }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default.a, {
+    variant: "body1",
+    style: {
+      color: '#949494'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  }, "or"), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    className: classes.open,
+    variant: "outlined",
+    color: "primary",
+    onClick: handleClickOpen,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 118
+    },
+    __self: this
+  }, "Show Contacts")), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_3___default.a, {
     className: classes.dialog,
     open: open,
     onClose: handleClose,
     TransitionComponent: Transition,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 122
     },
     __self: this
   }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_5___default.a, {
     className: classes.appBar,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 123
     },
     __self: this
   }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_6___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 124
     },
     __self: this
   }, __jsx(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_7___default.a, {
@@ -301,19 +330,19 @@ function FullScreenDialog({
     "aria-label": "close",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 125
     },
     __self: this
   }, __jsx(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_11___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 126
     },
     __self: this
   })))), __jsx(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_4___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 130
     },
     __self: this
   }, __jsx("form", {
@@ -322,7 +351,7 @@ function FullScreenDialog({
     autoComplete: "off",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 131
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default.a, {
@@ -333,35 +362,28 @@ function FullScreenDialog({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 132
     },
     __self: this
   }, "My information"), __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_8___default.a, {
     variant: 'h6',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 135
     },
     __self: this
   }, list.map(i => {
-    if (list === null) return __jsx("p", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 126
-      },
-      __self: this
-    }, "Nothing to show");
     return __jsx("ul", {
       className: classes.ul,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 128
+        lineNumber: 138
       },
       __self: this
     }, __jsx("li", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 139
       },
       __self: this
     }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -369,7 +391,7 @@ function FullScreenDialog({
       className: classes.item,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 140
       },
       __self: this
     }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -380,7 +402,7 @@ function FullScreenDialog({
       onChange: handleChange,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 141
       },
       __self: this
     })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -388,7 +410,7 @@ function FullScreenDialog({
       className: classes.item,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 139
+        lineNumber: 149
       },
       __self: this
     }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -399,7 +421,7 @@ function FullScreenDialog({
       onChange: handleChange,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140
+        lineNumber: 150
       },
       __self: this
     })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_10___default.a, {
@@ -407,7 +429,7 @@ function FullScreenDialog({
       className: classes.item,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 158
       },
       __self: this
     }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_9___default.a, {
@@ -418,7 +440,7 @@ function FullScreenDialog({
       onChange: handleChange,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149
+        lineNumber: 159
       },
       __self: this
     }))));
@@ -428,14 +450,14 @@ function FullScreenDialog({
     className: classes.buttons,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 175
     },
     __self: this
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_10___default.a, {
     item: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 176
     },
     __self: this
   }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -448,7 +470,7 @@ function FullScreenDialog({
     type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 177
     },
     __self: this
   }, "Save")))));
@@ -478,7 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Box */ "@material-ui/core/Box");
 /* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/Users/susanna/Downloads/exercise copy /exercise/src/components/ui/Form.tsx";
+var _jsxFileName = "/Users/susanna/Downloads/SimpleNext.js-project/src/components/ui/Form.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -532,6 +554,10 @@ const initialInformation = {
     1: setList
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
 
+  const cancel = () => {
+    setValues(initialInformation);
+  };
+
   const handleChange = event => {
     setValues(_objectSpread({}, values, {
       [event.target.name]: event.target.value
@@ -546,7 +572,7 @@ const initialInformation = {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 72
     },
     __self: this
   }, __jsx("form", {
@@ -556,7 +582,7 @@ const initialInformation = {
     autoComplete: "off",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 73
     },
     __self: this
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -564,7 +590,7 @@ const initialInformation = {
     className: classes.container,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 74
     },
     __self: this
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -572,7 +598,7 @@ const initialInformation = {
     className: classes.item,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 75
     },
     __self: this
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -583,7 +609,7 @@ const initialInformation = {
     name: 'firstName',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 76
     },
     __self: this
   })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -591,7 +617,7 @@ const initialInformation = {
     className: classes.item,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 84
     },
     __self: this
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -602,7 +628,7 @@ const initialInformation = {
     name: 'lastName',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 85
     },
     __self: this
   })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -610,7 +636,7 @@ const initialInformation = {
     className: classes.item,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 93
     },
     __self: this
   }, __jsx(_material_ui_core_TextField__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -621,7 +647,7 @@ const initialInformation = {
     name: 'email',
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 94
     },
     __self: this
   })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -630,7 +656,7 @@ const initialInformation = {
     className: classes.buttons,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 102
     },
     __self: this
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -638,7 +664,7 @@ const initialInformation = {
     className: classes.save,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 103
     },
     __self: this
   }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -651,7 +677,7 @@ const initialInformation = {
     type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 104
     },
     __self: this
   }, "Save")), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -659,7 +685,7 @@ const initialInformation = {
     className: classes.save,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 106
     },
     __self: this
   }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -668,18 +694,18 @@ const initialInformation = {
       height: '3rem'
     },
     variant: "contained",
+    onClick: cancel,
     color: "secondary",
-    type: "submit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 107
     },
     __self: this
   }, "Cancel")))), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_6___default.a, {
     className: classes.dialog,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 111
     },
     __self: this
   }, __jsx(_Dialog__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -687,7 +713,7 @@ const initialInformation = {
     values: values,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 112
     },
     __self: this
   }))));
@@ -711,7 +737,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core */ "@material-ui/core");
 /* harmony import */ var _material_ui_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_ui_Form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ui/Form */ "./src/components/ui/Form.tsx");
-var _jsxFileName = "/Users/susanna/Downloads/exercise copy /exercise/src/pages/FormPage.tsx";
+var _jsxFileName = "/Users/susanna/Downloads/SimpleNext.js-project/src/pages/FormPage.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -751,7 +777,7 @@ function FormPage() {
       lineNumber: 27
     },
     __self: this
-  }, "Information"), __jsx(_components_ui_Form__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  }, "My Contacts"), __jsx(_components_ui_Form__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
@@ -764,14 +790,14 @@ function FormPage() {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!**************************************!*\
   !*** multi ./src/pages/FormPage.tsx ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/susanna/Downloads/exercise copy /exercise/src/pages/FormPage.tsx */"./src/pages/FormPage.tsx");
+module.exports = __webpack_require__(/*! /Users/susanna/Downloads/SimpleNext.js-project/src/pages/FormPage.tsx */"./src/pages/FormPage.tsx");
 
 
 /***/ }),

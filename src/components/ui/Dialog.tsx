@@ -99,12 +99,24 @@ export default function FullScreenDialog({ list, values }: Props) {
     setUpdatedList([...updatedList, newValues])
     }
 
+  if (list.length === 0) 
+  return(
+    <>
+      <Box className={classes.box}>
+        <Typography variant="body1" style={{color: '#949494'}}>or</Typography>
+        <Button className={classes.open} disabled={true} variant="outlined" color="primary" onClick={handleClickOpen}>
+          Show Contacts
+        </Button>
+        </Box>
+    </>
+  ); 
+
   return (
     <div>
       <Box className={classes.box}>
         <Typography variant="body1" style={{color: '#949494'}}>or</Typography>
         <Button className={classes.open} variant="outlined" color="primary" onClick={handleClickOpen}>
-          Show Information
+         Show Contacts
         </Button>
       </Box>
       <Dialog className={classes.dialog} open={open} onClose={handleClose} TransitionComponent={Transition}>
@@ -122,7 +134,6 @@ export default function FullScreenDialog({ list, values }: Props) {
         </Typography>
         <Typography variant={'h6'}>
             {list.map((i) => {
-              if (list === null) return <p>Nothing to show</p>
               return (
                 <ul className={classes.ul}>
                   <li>

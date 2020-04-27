@@ -51,6 +51,10 @@ export default function () {
     const [values, setValues] = React.useState(initialInformation);
     const [list, setList] = useState([]);
 
+    const cancel = () => {
+      setValues(initialInformation);
+    };
+
     const handleChange = event => {
         setValues({
             ...values,
@@ -62,7 +66,7 @@ export default function () {
     const handleOnSubmit = (event) => {
       event.preventDefault()
       setList([...list, values])
-      }
+      } 
 
     return ( 
       <div>
@@ -100,7 +104,7 @@ export default function () {
               <Button style={{width:180, height: '3rem'}}variant="contained"  color="primary"type="submit">Save</Button>
             </Grid>
             <Grid item={true} className={classes.save}>
-              <Button style={{width:100, height: '3rem'}} variant="contained" color="secondary" type="submit">Cancel</Button>
+              <Button style={{width:100, height: '3rem'}} variant="contained" onClick={cancel} color="secondary">Cancel</Button>
             </Grid>
           </Grid>
         </Grid>

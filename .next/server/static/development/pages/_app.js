@@ -2179,7 +2179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/Box */ "@material-ui/core/Box");
 /* harmony import */ var _material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/susanna/Downloads/exercise copy /exercise/src/components/ui/Footer.tsx";
+var _jsxFileName = "/Users/susanna/Downloads/SimpleNext.js-project/src/components/ui/Footer.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2230,7 +2230,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/susanna/Downloads/exercise copy /exercise/src/components/ui/Header.tsx";
+var _jsxFileName = "/Users/susanna/Downloads/SimpleNext.js-project/src/components/ui/Header.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -2297,7 +2297,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../theme */ "./src/theme/index.ts");
 /* harmony import */ var _components_ui_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ui/Header */ "./src/components/ui/Header.tsx");
 /* harmony import */ var _components_ui_Footer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ui/Footer */ "./src/components/ui/Footer.tsx");
-var _jsxFileName = "/Users/susanna/Downloads/exercise copy /exercise/src/pages/_app.tsx";
+var _jsxFileName = "/Users/susanna/Downloads/SimpleNext.js-project/src/pages/_app.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
