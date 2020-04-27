@@ -15,7 +15,6 @@ import Box from '@material-ui/core/Box';
 import Slide from '@material-ui/core/Slide';
 import { TransitionProps } from '@material-ui/core/transitions/transition';
 
-
 const useStyles = makeStyles(theme => ({
   appBar: {
     position: 'relative',
