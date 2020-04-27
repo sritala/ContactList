@@ -1,5 +1,5 @@
-Install:
+## Install:
 ### npm install 
 
-Run with:
+## Run with:
 ### npm run dev
