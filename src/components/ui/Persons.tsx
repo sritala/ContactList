@@ -27,7 +27,7 @@ const image = (person) => {
   if (person.image !== null) {
     return(
       <>
-        <img src={person.image} width={200} style={{borderRadius: '70%'}} />
+        <img src={person.image} width={200} height={200} style={{borderRadius: '70%'}} />
       </>
     );
   }
@@ -51,7 +51,7 @@ const Persons = ({ persons, onDelete }) => {
   return(
     <>
       {persons.map(person => (
-        <li>
+        <li style={{listStyle:'none'}}>
           <p key={person.id}>
           <Grid container={true} spacing={6} className={classes.grid}>
             <Grid item={true} className={classes.image} >

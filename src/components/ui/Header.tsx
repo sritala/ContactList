@@ -13,14 +13,14 @@ export default function() {
                     Home
                 </Button>
             </Link>
-            <Link href={'/AddContact'} passHref>
-                <Button disabled={router.pathname === '/AddContact'} component="a" color="primary">
-                  Add Contact
+            <Link href={'/Contacts'} passHref>
+                <Button disabled={router.pathname === '/Contacts'} component="a" color="primary">
+                   Contacts
                 </Button>
             </Link>
-            <Link href={'/ShowContacts'} passHref>
-                <Button style={{marginLeft: 15}}  disabled={router.pathname === '/ShowContacts'} component="a" color="primary">
-                    Show Contacts
+            <Link href={'/AddContact'} passHref>
+                <Button style={{marginLeft: 15}} disabled={router.pathname === '/AddContact'} component="a" color="primary">
+                  Add Contact
                 </Button>
             </Link>
         </>

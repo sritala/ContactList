@@ -10,7 +10,6 @@ const useStyles = makeStyles((theme) => ({
    dialog:{
     paddingTop:'1rem',   
   },
-   
 }));
 
 export default function () {
@@ -78,7 +77,8 @@ export default function () {
       const personObject = {
         name: newName,
         number: newNumber,
-        id: persons.length + 1
+        id: persons.length + 1,
+        image: null
       }
 
       personService
@@ -96,12 +96,6 @@ export default function () {
           }, 2000);
           setNewName('');
           setNewNumber('');
-        })
-        .catch(error => {
-          setErrorMessage(`Information of ${newName} has already been removed from server`);
-          setTimeout(() => {
-            setErrorMessage(null)
-          }, 5000);
         })
     }
   }

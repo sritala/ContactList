@@ -21963,7 +21963,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, "Home")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: '/AddContact',
+    href: '/Contacts',
     passHref: true,
     __source: {
       fileName: _jsxFileName,
@@ -21971,7 +21971,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     },
     __self: this
   }, __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    disabled: router.pathname === '/AddContact',
+    disabled: router.pathname === '/Contacts',
     component: "a",
     color: "primary",
     __source: {
@@ -21979,8 +21979,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 17
     },
     __self: this
-  }, "Add Contact")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: '/ShowContacts',
+  }, "Contacts")), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    href: '/AddContact',
     passHref: true,
     __source: {
       fileName: _jsxFileName,
@@ -21991,7 +21991,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
     style: {
       marginLeft: 15
     },
-    disabled: router.pathname === '/ShowContacts',
+    disabled: router.pathname === '/AddContact',
     component: "a",
     color: "primary",
     __source: {
@@ -21999,7 +21999,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 22
     },
     __self: this
-  }, "Show Contacts")));
+  }, "Add Contact")));
 });
 
 /***/ }),

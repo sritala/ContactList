@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -668,7 +668,8 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["makeSty
       const personObject = {
         name: newName,
         number: newNumber,
-        id: persons.length + 1
+        id: persons.length + 1,
+        image: null
       };
       _services_persons__WEBPACK_IMPORTED_MODULE_3__["default"].create(personObject).then(returnedNote => {
         if (personIsAdded(newName, persons)) {
@@ -686,11 +687,6 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["makeSty
         }, 2000);
         setNewName('');
         setNewNumber('');
-      }).catch(error => {
-        setErrorMessage(`Information of ${newName} has already been removed from server`);
-        setTimeout(() => {
-          setErrorMessage(null);
-        }, 5000);
       });
     }
   };
@@ -728,21 +724,21 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["makeSty
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 139
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     container: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 140
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Grid"], {
     item: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 141
     },
     __self: this
   }, __jsx(_PersonForm__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -754,14 +750,14 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["makeSty
     cancel: cancel,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 142
     },
     __self: this
   }))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["Box"], {
     className: classes.dialog,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 158
+      lineNumber: 152
     },
     __self: this
   }, __jsx(_Dialog__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -771,7 +767,7 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["makeSty
     persons: persons,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 159
+      lineNumber: 153
     },
     __self: this
   })), __jsx(_Notification__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -779,7 +775,7 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_1__["makeSty
     message: errorMessage,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 160
     },
     __self: this
   }));
@@ -1056,6 +1052,7 @@ const image = person => {
     return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("img", {
       src: person.image,
       width: 200,
+      height: 200,
       style: {
         borderRadius: '70%'
       },
@@ -1095,6 +1092,9 @@ const Persons = ({
 
   const classes = useStyles();
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, persons.map(person => __jsx("li", {
+    style: {
+      listStyle: 'none'
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
@@ -1235,7 +1235,7 @@ function FormPage() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!****************************************!*\
   !*** multi ./src/pages/AddContact.tsx ***!
   \****************************************/
