@@ -71,6 +71,7 @@ export default function SimpleDialog({
   deletePerson,
   persons,
 }) {
+  
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 

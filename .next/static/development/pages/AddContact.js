@@ -52302,7 +52302,7 @@ function SimpleDialog({
     className: classes.box,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 89
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -52312,7 +52312,7 @@ function SimpleDialog({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 90
     },
     __self: this
   }, "or"), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -52323,21 +52323,21 @@ function SimpleDialog({
     onClick: handleClickOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 93
     },
     __self: this
   }, "Show Contacts")));
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 107
     },
     __self: this
   }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
     className: classes.box,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 108
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -52347,7 +52347,7 @@ function SimpleDialog({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 109
     },
     __self: this
   }, "or"), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -52357,7 +52357,7 @@ function SimpleDialog({
     onClick: handleClickOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 112
     },
     __self: this
   }, "Show Contacts")), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -52367,27 +52367,27 @@ function SimpleDialog({
     TransitionComponent: Transition,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 121
     },
     __self: this
   }, __jsx("form", {
     className: classes.form,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 127
     },
     __self: this
   }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_6__["default"], {
     className: classes.appBar,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 128
     },
     __self: this
   }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 129
     },
     __self: this
   }, __jsx(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -52400,25 +52400,25 @@ function SimpleDialog({
     "aria-label": "close",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 129
+      lineNumber: 130
     },
     __self: this
   }, __jsx(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_10___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 137
     },
     __self: this
   })))), __jsx(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 141
     },
     __self: this
   }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 142
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -52429,7 +52429,7 @@ function SimpleDialog({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 143
     },
     __self: this
   }, "My Contacts")), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -52439,35 +52439,35 @@ function SimpleDialog({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 151
     },
     __self: this
   }, __jsx(_Filter__WEBPACK_IMPORTED_MODULE_15__["default"], {
     onChangeHandler: handleSearchName,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 152
     },
     __self: this
   })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
     className: classes.contacts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 154
     },
     __self: this
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_12__["default"], {
     item: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 155
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__["default"], {
     variant: "h6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 156
     },
     __self: this
   }, __jsx(_Persons__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -52475,7 +52475,7 @@ function SimpleDialog({
     onDelete: deletePerson,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 157
     },
     __self: this
   }))))))));
