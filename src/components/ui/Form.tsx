@@ -1,117 +1,175 @@
-import React, { useState } from 'react';
-import { Typography, makeStyles } from '@material-ui/core';
+import React, { useState, useEffect } from 'react';
+import { Typography, Grid, makeStyles, Box } from '@material-ui/core';
 import Dialog from './Dialog';
-import TextField from '@material-ui/core/TextField';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
+import personService from '../services/persons';
+import PersonForm from './PersonForm';
+import Persons from './Persons';
+import Notification from './Notification';
 
-
-const initialInformation = {
-    firstName: '',
-    lastName: '',
-    email: ''
-}
+const useStyles = makeStyles((theme) => ({
+   items: {
+      display:'flex',
+      justifyContent: 'center',
+      flexDirection: 'row',
+   },
+   dialog:{
+    paddingTop:'1rem',   
+  },
+   
+}));
 
 export default function () {
 
-    const useStyles = makeStyles(theme => ({
-        root: {
-          '& .MuiTextField-root': {
-            margin: theme.spacing(1),
-            width: 300,
-          },
-        },
-        container: {
-          flexDirection:'column',
-          alignItems: 'center',
-          
-        },
-        save: {
-         paddingTop:'1rem',
-         
-        },
-        dialog:{
-          paddingTop:'1rem',   
-        },
-        item:{
+  const classes = useStyles();
 
-        },
-        buttons:{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent:'center',
-          paddingTop:'1rem',  
-        }
+  const [persons, setPersons] = useState([]);
+  const [newName, setNewName] = useState('');
+  const [newNumber, setNewNumber] = useState('');
+  const [searchName, setSearchName] = useState('');
+  const [showAll, setShowAll] = useState(true);
+  const [notificationMessage, setNotificationMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
-      }));
-      
-    const classes = useStyles();
+  useEffect(() => {
+    personService
+      .getAll()
+      .then(initialPersons => {
+        setPersons(initialPersons);
+      });
+  }, []);
 
-    const [values, setValues] = React.useState(initialInformation);
-    const [list, setList] = useState([]);
+  const personIsAdded = (name, data) => {
+    let isAdded = data.find(el => el.name === name);
+    if (isAdded === undefined) {
+      return false;
+    }
+    return true;
+  } 
 
-    const cancel = () => {
-      setValues(initialInformation);
-    };
+  const addContact = event => {
+    event.preventDefault();
+    // Check if the contact already exists
+    const toUpdate = persons.filter(p => {
+      return p.name.includes(newName);
+    });
+    if (toUpdate.length === 1) {
+      const confirm = window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`);
+      if (confirm) {
+        personService
+          .update(toUpdate[0].id, {
+            ...toUpdate[0],
+            number: newNumber
+          })
+          .then(updatedPerson => {
+            let updatedState = persons.filter(p => p.id !== updatedPerson.id);
+            updatedState = [...updatedState, updatedPerson];
+            setPersons(updatedState);
+            setNewName('');
+            setNewNumber('');
+            setNotificationMessage(`Added ${updatedPerson.name}`);
+            setTimeout(() => {
+              setNotificationMessage(null)
+            }, 2000);
+          })
+          .catch(error => {
+            setErrorMessage(`Information of ${newName} has already been removed from server`);
+            setTimeout(() => {
+              setErrorMessage(null)
+            }, 5000);
+          })
+      }
+    } else {
+      // if not, save the person
+      const personObject = {
+        name: newName,
+        number: newNumber,
+        id: persons.length + 1
+      }
 
-    const handleChange = event => {
-        setValues({
-            ...values,
-            [event.target.name]: event.target.value
-        } as any);
+      personService
+        .create(personObject)
+        .then(returnedNote => {
+          if (personIsAdded(newName, persons)) {
+            alert(`${newName} is already added to phonebook`);
+          }
+          else {
+            setPersons([...persons, { name: newName, number: newNumber }]);
+          }
+          setNotificationMessage(`Added ${newName}`);
+          setTimeout(() => {
+            setNotificationMessage(null)
+          }, 2000);
+          setNewName('');
+          setNewNumber('');
+        })
+        .catch(error => {
+          setErrorMessage(`Information of ${newName} has already been removed from server`);
+          setTimeout(() => {
+            setErrorMessage(null)
+          }, 5000);
+        })
+    }
+  }
+  
+  const handleNameChange = event => {
+    setNewName(event.target.value);
+  }
 
-    };
+  const handleNumberChange = event => {
+    setNewNumber(event.target.value);
+  }
 
-    const handleOnSubmit = (event) => {
-      event.preventDefault()
-      setList([...list, values])
-      } 
+  const cancel = () => {
+    setNewName('');
+    setNewNumber('');
+  };
 
-    return ( 
-      <div>
-        <form onSubmit={handleOnSubmit} className={classes.root} noValidate autoComplete="off">
-        <Grid container={true} className={classes.container}>
-          <Grid item={true} className={classes.item}>
-          <TextField
-            id="standard-multiline-flexible"
-            label="First name"
-            value={values.firstName}
-            onChange={handleChange}
-            name={'firstName'}
-          />
-          </Grid>
-          <Grid item={true} className={classes.item} >
-          <TextField
-            id="standard-textarea"
-            label="Last name"
-            value={values.lastName}
-            onChange={handleChange}
-            name={'lastName'}
-          />
-          </Grid>
-          <Grid item={true} className={classes.item}>
-           <TextField
-            id="standard-textarea"
-            label="Email"
-            value={values.email}
-            onChange={handleChange}
-            name={'email'}
-          />
-          </Grid>
-          <Grid container={true} spacing={1} className={classes.buttons}>
-            <Grid item={true} className={classes.save}>
-              <Button style={{width:180, height: '3rem'}}variant="contained"  color="primary"type="submit">Save</Button>
+  const deletePerson = id => {
+    personService
+      .remove(id)
+      .then(() => {
+        const updatedPersons = persons.filter(p => p.id !== id);
+        setPersons(updatedPersons);
+      })
+  }
+
+  const handleSearchName = event => {
+    setSearchName(event.target.value);
+    setShowAll(false);
+  }
+
+  const contactsToShow = showAll
+  ? persons
+  : persons.filter(person => {
+      let toFilter = person.name.toLocaleLowerCase();
+      let toSearch = searchName.toLowerCase()
+      return toFilter.includes(toSearch);
+    });
+
+      return (
+        <div>
+          <Grid container={true} className={classes.items}>
+            <Grid item={true}>
+              <PersonForm
+                handleOnSubmit={addContact}
+                newName={newName}
+                handleOnNameChange={handleNameChange}
+                newNumber={newNumber}
+                handleOnNumberChange={handleNumberChange}
+                cancel = {cancel}
+              />
             </Grid>
-            <Grid item={true} className={classes.save}>
-              <Button style={{width:100, height: '3rem'}} variant="contained" onClick={cancel} color="secondary">Cancel</Button>
-            </Grid>
           </Grid>
-        </Grid>
-        <Box className={classes.dialog}>
-          <Dialog list={list} values={values}/>
-        </Box>
-      </form> 
-    </div>
-    )
-}
+          <Box className={classes.dialog}>
+             <Dialog 
+             contactsToShow={contactsToShow}
+             handleSearchName = {handleSearchName}
+             deletePerson = {deletePerson}
+             persons = {persons}
+             />
+          </Box>
+          <Notification type={"error"} message={errorMessage} />
+        </div>
+      );
+    }
+

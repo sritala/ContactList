@@ -13,7 +13,7 @@ export default function() {
             </Link>
             <Link href={'/FormPage'} passHref>
                 <Button disabled={router.pathname === '/FormPage'} component="a" color="primary">
-                    Form page
+                    Add Contact
                 </Button>
             </Link>
         </>

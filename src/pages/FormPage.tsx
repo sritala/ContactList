@@ -24,7 +24,7 @@ function FormPage() {
     return (
         <div className={classes.wrapper}> 
             <Box className={classes.form}>
-                <Typography variant='h4' color='primary'>My Contacts</Typography>   
+                <Typography variant='h5' color='primary'>Add Contacts</Typography>   
                 <Form/>
             </Box>
         </div>

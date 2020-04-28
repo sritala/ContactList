@@ -21979,7 +21979,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
       lineNumber: 15
     },
     __self: this
-  }, "Form page")));
+  }, "Add Contact")));
 });
 
 /***/ }),

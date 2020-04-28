@@ -1,0 +1,28 @@
+{
+  "persons": [
+    {
+      "name": "Sally Smith",
+      "number": "04054323456",
+      "id": 1,
+      "image": "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    },
+    {
+      "name": "Johan Kjellberg",
+      "number": "123456789",
+      "id": 2,
+      "image": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+    },
+    {
+      "name": "Matti Vuorinen",
+      "number": "0503245621",
+      "id": 3,
+      "image": null
+    },
+    {
+      "name": "Riitta Nieminen",
+      "number": "0987654321",
+      "id": 4,
+      "image": null
+    }
+  ]
+}
