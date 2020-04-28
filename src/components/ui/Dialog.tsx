@@ -127,7 +127,7 @@ export default function SimpleDialog({
           <AppBar className={classes.appBar}>
             <Toolbar>
               <IconButton
-                style={{ color: "#575757" }}
+                style={{ color: "white" }}
                 edge="start"
                 color="inherit"
                 onClick={handleClose}

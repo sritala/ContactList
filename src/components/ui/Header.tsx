@@ -11,9 +11,9 @@ export default function() {
             <Link href={'/'} passHref>
                 <Button disabled={router.pathname === '/'} component="a" color="primary">Home</Button>
             </Link>
-            <Link href={'/FormPage'} passHref>
-                <Button disabled={router.pathname === '/FormPage'} component="a" color="primary">
-                    Add Contact
+            <Link href={'/AddContact'} passHref>
+                <Button disabled={router.pathname === '/AddContact'} component="a" color="primary">
+                  Add Contact
                 </Button>
             </Link>
         </>
