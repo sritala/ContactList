@@ -2,7 +2,7 @@
 
 This application allows you to add and manage contacts.
 
-[Demo](https://github.com/sritala/ContactList/demo)
+[Demo](https://github.com/sritala/ContactList/blob/master/ContactList.pdf)
 
 ### Instructions 
 
