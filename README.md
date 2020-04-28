@@ -19,3 +19,8 @@ npm run dev
 
 #### Go to:
 http://localhost:3000/
+
+
+### Improvements: 
+
+Some issues with Next rendering. Some of the styles can be too slow. 
