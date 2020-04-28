@@ -53146,7 +53146,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 const Index = ({
-  title = 'Hello from next.js'
+  title = 'Contact List'
 }) => __jsx("div", {
   __source: {
     fileName: _jsxFileName,
