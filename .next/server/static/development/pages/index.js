@@ -238,7 +238,7 @@ const Index = ({
     lineNumber: 6
   },
   __self: undefined
-}, __jsx("h2", {
+}, __jsx("h1", {
   style: {
     color: '#575757',
     display: 'flex',
