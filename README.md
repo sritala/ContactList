@@ -11,6 +11,8 @@ npm install
 
 npx json-server --port=3001 --watch db.json
 
+http://localhost:3001/persons
+
 #### Run with:
 npm run dev
 
