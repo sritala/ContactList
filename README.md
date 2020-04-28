@@ -1,6 +1,6 @@
 ## Contact List
 
-This application allows you to add and manage contacts.
+This application allows you to add and manage contacts. This is an exercise app. 
 
 [Demo](https://github.com/sritala/ContactList/blob/master/ContactList.pdf)
 
