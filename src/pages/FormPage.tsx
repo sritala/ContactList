@@ -4,6 +4,7 @@ import Box from '@material-ui/core/Box'
 import { Typography, makeStyles } from '@material-ui/core';
 import Form from  '../components/ui/Form';
 
+
 const useStyles = makeStyles(() => ({
     wrapper: {
     
@@ -21,7 +22,7 @@ const useStyles = makeStyles(() => ({
 function FormPage() {
     const classes = useStyles();
 
-    return (
+    return (  
         <div className={classes.wrapper}> 
             <Box className={classes.form}>
                 <Typography variant='h5' color='primary'>Add Contacts</Typography>   

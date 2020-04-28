@@ -49,6 +49,12 @@ const useStyles = makeStyles((theme) => ({
     display:'flex',
     flexDirection: 'column',
     alignItems: 'center'
+  },
+  form: {
+    width: 600,
+    [theme.breakpoints.down('xs')]: {
+      width: 350,
+    },
   }
 
 }));
@@ -117,7 +123,7 @@ export default function SimpleDialog({
         onClose={handleClose}
         TransitionComponent={Transition}
       >
-        <form style={{width:600}}>
+        <form className={classes.form}>
           <AppBar className={classes.appBar}>
             <Toolbar>
               <IconButton

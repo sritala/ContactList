@@ -7,11 +7,6 @@ import Persons from './Persons';
 import Notification from './Notification';
 
 const useStyles = makeStyles((theme) => ({
-   items: {
-      display:'flex',
-      justifyContent: 'center',
-      flexDirection: 'row',
-   },
    dialog:{
     paddingTop:'1rem',   
   },
@@ -53,7 +48,7 @@ export default function () {
       return p.name.includes(newName);
     });
     if (toUpdate.length === 1) {
-      const confirm = window.confirm(`${newName} is already added to phonebook, replace the old number with a new one?`);
+      const confirm = window.confirm(`${newName} is already added to Contact List, replace the old number with a new one?`);
       if (confirm) {
         personService
           .update(toUpdate[0].id, {
@@ -90,7 +85,7 @@ export default function () {
         .create(personObject)
         .then(returnedNote => {
           if (personIsAdded(newName, persons)) {
-            alert(`${newName} is already added to phonebook`);
+            alert(`${newName} is already added to Contact List`);
           }
           else {
             setPersons([...persons, { name: newName, number: newNumber }]);
@@ -148,7 +143,7 @@ export default function () {
 
       return (
         <div>
-          <Grid container={true} className={classes.items}>
+          <Grid container={true}>
             <Grid item={true}>
               <PersonForm
                 handleOnSubmit={addContact}

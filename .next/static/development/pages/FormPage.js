@@ -52261,6 +52261,12 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center'
+  },
+  form: {
+    width: 600,
+    [theme.breakpoints.down('xs')]: {
+      width: 350
+    }
   }
 }));
 const Transition = Object(react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(function Transition(props, ref) {
@@ -52270,7 +52276,7 @@ const Transition = Object(react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"])(func
   }, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 64
     },
     __self: this
   }));
@@ -52296,7 +52302,7 @@ function SimpleDialog({
     className: classes.box,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 88
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -52306,7 +52312,7 @@ function SimpleDialog({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 89
     },
     __self: this
   }, "or"), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -52317,21 +52323,21 @@ function SimpleDialog({
     onClick: handleClickOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 92
     },
     __self: this
   }, "Show Contacts")));
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 106
     },
     __self: this
   }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
     className: classes.box,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 107
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -52341,7 +52347,7 @@ function SimpleDialog({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 108
     },
     __self: this
   }, "or"), __jsx(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -52351,7 +52357,7 @@ function SimpleDialog({
     onClick: handleClickOpen,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 111
     },
     __self: this
   }, "Show Contacts")), __jsx(_material_ui_core_Dialog__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -52361,29 +52367,27 @@ function SimpleDialog({
     TransitionComponent: Transition,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 120
     },
     __self: this
   }, __jsx("form", {
-    style: {
-      width: 600
-    },
+    className: classes.form,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 126
     },
     __self: this
   }, __jsx(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_6__["default"], {
     className: classes.appBar,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 127
     },
     __self: this
   }, __jsx(_material_ui_core_Toolbar__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 128
     },
     __self: this
   }, __jsx(_material_ui_core_IconButton__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -52396,25 +52400,25 @@ function SimpleDialog({
     "aria-label": "close",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 129
     },
     __self: this
   }, __jsx(_material_ui_icons_Close__WEBPACK_IMPORTED_MODULE_10___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 136
     },
     __self: this
   })))), __jsx(_material_ui_core_List__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 140
     },
     __self: this
   }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 141
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -52425,7 +52429,7 @@ function SimpleDialog({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 142
     },
     __self: this
   }, "My Contacts")), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -52435,35 +52439,35 @@ function SimpleDialog({
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 150
     },
     __self: this
   }, __jsx(_Filter__WEBPACK_IMPORTED_MODULE_15__["default"], {
     onChangeHandler: handleSearchName,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 151
     },
     __self: this
   })), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_11__["default"], {
     className: classes.contacts,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 153
     },
     __self: this
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_12__["default"], {
     item: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 148
+      lineNumber: 154
     },
     __self: this
   }, __jsx(_material_ui_core_Typography__WEBPACK_IMPORTED_MODULE_9__["default"], {
     variant: "h6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 155
     },
     __self: this
   }, __jsx(_Persons__WEBPACK_IMPORTED_MODULE_13__["default"], {
@@ -52471,7 +52475,7 @@ function SimpleDialog({
     onDelete: deletePerson,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 156
     },
     __self: this
   }))))))));
@@ -52625,11 +52629,6 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 
 const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeStyles"])(theme => ({
-  items: {
-    display: 'flex',
-    justifyContent: 'center',
-    flexDirection: 'row'
-  },
   dialog: {
     paddingTop: '1rem'
   }
@@ -52688,7 +52687,7 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeSty
     });
 
     if (toUpdate.length === 1) {
-      const confirm = window.confirm("".concat(newName, " is already added to phonebook, replace the old number with a new one?"));
+      const confirm = window.confirm("".concat(newName, " is already added to Contact List, replace the old number with a new one?"));
 
       if (confirm) {
         _services_persons__WEBPACK_IMPORTED_MODULE_10__["default"].update(toUpdate[0].id, _objectSpread({}, toUpdate[0], {
@@ -52719,7 +52718,7 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeSty
       };
       _services_persons__WEBPACK_IMPORTED_MODULE_10__["default"].create(personObject).then(returnedNote => {
         if (personIsAdded(newName, persons)) {
-          alert("".concat(newName, " is already added to phonebook"));
+          alert("".concat(newName, " is already added to Contact List"));
         } else {
           setPersons([...persons, {
             name: newName,
@@ -52775,22 +52774,21 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeSty
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 145
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Grid"], {
     container: true,
-    className: classes.items,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 146
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Grid"], {
     item: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 147
     },
     __self: this
   }, __jsx(_PersonForm__WEBPACK_IMPORTED_MODULE_11__["default"], {
@@ -52802,14 +52800,14 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeSty
     cancel: cancel,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 148
     },
     __self: this
   }))), __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Box"], {
     className: classes.dialog,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 158
     },
     __self: this
   }, __jsx(_Dialog__WEBPACK_IMPORTED_MODULE_9__["default"], {
@@ -52819,7 +52817,7 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeSty
     persons: persons,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 164
+      lineNumber: 159
     },
     __self: this
   })), __jsx(_Notification__WEBPACK_IMPORTED_MODULE_12__["default"], {
@@ -52827,7 +52825,7 @@ const useStyles = Object(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["makeSty
     message: errorMessage,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 166
     },
     __self: this
   }));
@@ -53243,14 +53241,14 @@ function FormPage() {
     className: classes.wrapper,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   }, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_1__["default"], {
     className: classes.form,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 27
     },
     __self: this
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_2__["Typography"], {
@@ -53258,13 +53256,13 @@ function FormPage() {
     color: "primary",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 28
     },
     __self: this
   }, "Add Contacts"), __jsx(_components_ui_Form__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   })));
