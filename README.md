@@ -1,6 +1,6 @@
 ## Contact List
 
-This application allows its user to add and manage contacts. 
+This application allows you to add and manage contacts.
 
 ### Instructions 
 
