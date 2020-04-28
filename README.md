@@ -2,6 +2,8 @@
 
 This application allows you to add and manage contacts.
 
+[Demo](https://github.com/sritala/ContactList/demo)
+
 ### Instructions 
 
 #### Install:
